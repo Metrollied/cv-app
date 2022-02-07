@@ -1,38 +1,226 @@
-.App {
-  text-align: center;
+body, #app {
+	display: flex;
+	flex-direction: column;
+	width: 99vw;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+	gap: 20px;
+	background-color: #25274D;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+p {
+	margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#cvForm h2 {
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	align-self: flex-start;
+	margin-left: 3em;
+}
+h3 {
+	margin: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+input, textarea {
+	font-size: 13px;
+	width: 50em;
+	height: 2em;
+	border: solid 2px #29648A;
+	border-radius: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+textarea {
+	resize: none;
+	font: inherit;
+	font-size: 13px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.details {
+	height: 5em;
+}
+
+.header {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #2E9CCA;
+	color: white;
+	margin: 0;
+	height: 3em;
+}
+
+#cvForm {
+	margin: 0px, 10px;
+	padding: 30px 0;
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+#cvForm, .experienceForm, .educationForm {
+	
+	background-color: #464866;
+	color: white;
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 21cm;
+	gap: 10px;
+}
+
+.buttonArea {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 20px;
+}
+
+.addButton, .removeButton {
+	color: white;
+	border: none;
+	border-radius: 5px;
+	font-size: 1em;
+	font-weight: bolder;
+	padding: 2px 5px;
+}
+
+.addButton:hover, .removeButton:hover {
+	cursor: pointer;
+}
+
+.addButton {
+	background-color: #2E9CCA
+}
+
+.addButton:active {
+	background-color: #2889b3;
+}
+
+.removeButton {
+	background-color: #9899aa;
+}
+
+.removeButton:active, .removeButton:disabled {
+	background-color: #7c7c8b;
+}
+
+.cvDisplay {
+	display: flex;
+	flex-direction: row;
+	align-content: center;
+	width: 21cm;
+	min-height: 29.7cm;
+	background-color: white;
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.detailsArea {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #29648A;
+	padding-top: 10px;
+	margin: 0;
+	color: white;
+	width: 300px;
+	gap: 20px;
+}
+
+.nameArea {
+	text-transform: uppercase;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 19px;
+	color: white;
+	margin: 0;
+	padding: 20px 0;
+	border-bottom: solid 2px #235475;
+	width: 80%;
+}
+
+.contactDetails {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 10px;
+	font-size: 12px;
+	
+	border-bottom: solid 2px #235475;
+	width: 80%;
+	padding-bottom: 20px;
+}
+
+.contactDetails h3 {
+	align-self: flex-start;
+}
+
+.history {
+	width: 494px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding-top: 20px;
+	gap: 10px;
+}
+
+.history > * {
+	margin: 0;
+	padding: 0 30px;
+	max-width: 434px;
+}
+
+.areaContainer {
+	padding: 0;
+	width: 434px;
+	display: flex;
+	align-self: center;
+	border-bottom: solid 2px rgba(0, 0, 0, 0.486);
+}
+
+.areaContainer h2 {
+	margin: 0;
+	padding: 0;
+	align-self: flex-start;
+}
+
+.educationDisplay, .experienceDisplay {
+	padding: 10px 0 10px 30px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	width: 100%;
+}
+
+.educationDisplay > *, .experienceDisplay > * {
+	margin: 0;
+}
+
+.educationDisplayHeader, .experienceDisplayHeader	{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.references {
+	padding: 5px 0px;
+	width: 434px;
+	display: flex;
+	align-self: center;
+	border-top: solid 2px rgba(0, 0, 0, 0.486);
+}
+
+.footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 3em;
+	background-color: #29648A;
+	color: white;
+	margin: 0;
+	width: 100%;
 }
