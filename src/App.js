@@ -13,6 +13,10 @@ const App = () => {
 		email: '',
 	}))
 
+	useEffect(() => {
+		document.title = "CV App"
+	} 
+	)
 
 	const [disableRemoveExperience, disableExperience] = useState(false);
 	const [experienceCounter, setExperienceCounter] = useState(1);
