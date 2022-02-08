@@ -1,3 +1,3 @@
-# Getting Started with Create React App
+# This projext was made with React as a part of TheOdinProject.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+To see a demo, [click here](https://metrollied.github.io/cv-app/)
